@@ -31,7 +31,7 @@
         </div>
         <!-- kotak kanan -->
         <div class="col-md-6 p-4 my-3 right-box">
-          <form @submit="handleSubmit" method="POST" class="needs-validation" autocomplete="off">
+          <form @submit.prevent="handleSubmit" class="needs-validation" autocomplete="off">
             <div class="row align-items-center">
               <div class="header-text mb-4">
                 <h2>Register</h2>
@@ -39,31 +39,31 @@
               <div class="input-group mb-3">
                 <div class="col">
                   <label for="" class="mb-2">Username</label>
-                  <input type="text" class="form-control form-control-lg bg-light fs-6 w-100" placeholder="Username" required autofocus />
+                  <input type="text" v-model="username" class="form-control form-control-lg bg-light fs-6 w-100" placeholder="Username" required autofocus />
                   <div class="invalid-feedback">Username is invalid</div>
                 </div>
               </div>
-              <div class="input-group mb-1">
+              <div class="input-group mb-3">
                 <div class="col">
                   <label for="" class="mb-2">Password</label>
-                  <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="password" required />
+                  <input type="password" v-model="password" class="form-control form-control-lg bg-light fs-6" placeholder="password" required />
+                  <div class="invalid-feedback">Password is required</div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <div class="col">
+                  <label for="" class="mb-2">Confirm Password</label>
+                  <input type="password" v-model="confirmPassword" class="form-control form-control-lg bg-light fs-6" placeholder="password" required />
                   <div class="invalid-feedback">Password is required</div>
                 </div>
               </div>
               <div class="input-group mb-5 d-flex justify-content-between">
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="formCheck" />
-                  <label for="formCheck" clas><small>Remember Me</small></label>
-                </div>
                 <div class="forgot">
                   <a href="#">Forgot Password?</a>
                 </div>
               </div>
               <div class="input-group mb-3">
-                <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Login</button>
-              </div>
-              <div class="input-group mb-3">
-                <h6 type="submit" class="fs-6">Don't have an account? <a class="stylnone" href="../../register/register.html">Create Account</a></h6>
+                <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Register</button>
               </div>
             </div>
           </form>
@@ -74,8 +74,28 @@
 
 <script>
 
+  import axios from 'axios';
+
   export default {
-    name: 'Register'
+    name: 'Register',
+    data() {
+      return {
+        username: '',
+        password: '',
+        confirmPassword: ''
+      }
+    },
+    methods: {
+      async handleSubmit() {
+        const response = await axios.post('register', {
+          username: this.username,
+          password: this.password,
+          confirmPassword: this.confirmPassword
+        });
+
+        console.log(response.data);
+      }
+    }
   }
 
 </script>
