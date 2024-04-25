@@ -39,31 +39,33 @@
               <div class="input-group mb-3">
                 <div class="col">
                   <label for="" class="mb-2">Username</label>
-                  <input type="text" v-model="username" class="form-control form-control-lg bg-light fs-6 w-100" placeholder="Username" required autofocus />
+                  <input type="text" v-model="register.username" class="form-control form-control-lg bg-light fs-6 w-100" placeholder="Username" required autofocus />
                   <div class="invalid-feedback">Username is invalid</div>
                 </div>
               </div>
               <div class="input-group mb-3">
                 <div class="col">
                   <label for="" class="mb-2">Password</label>
-                  <input type="password" v-model="password" class="form-control form-control-lg bg-light fs-6" placeholder="password" required />
+                  <input type="password" v-model="register.password" class="form-control form-control-lg bg-light fs-6" placeholder="password" required />
                   <div class="invalid-feedback">Password is required</div>
                 </div>
               </div>
-              <div class="input-group mb-3">
+              <div class="input-group mb-5">
                 <div class="col">
                   <label for="" class="mb-2">Confirm Password</label>
-                  <input type="password" v-model="confirmPassword" class="form-control form-control-lg bg-light fs-6" placeholder="password" required />
+                  <input type="password" v-model="register.confirmPassword" class="form-control form-control-lg bg-light fs-6" placeholder="password" required />
                   <div class="invalid-feedback">Password is required</div>
                 </div>
               </div>
-              <div class="input-group mb-5 d-flex justify-content-between">
-                <div class="forgot">
-                  <a href="#">Forgot Password?</a>
-                </div>
-              </div>
-              <div class="input-group mb-3">
+              <div class="input-group mb-2 mt-3">
                 <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Register</button>
+              </div>
+              <div class="input-group mb-5 mt-3 d-flex justify-content-between">
+                <div class="forgot">
+                  <p>Already have an account?
+                    <a href="#">Sign in here</a>
+                  </p>
+                </div>
               </div>
             </div>
           </form>
@@ -80,9 +82,11 @@
     name: 'Register',
     data() {
       return {
-        username: '',
-        password: '',
-        confirmPassword: ''
+        register: {
+          username: '',
+          password: '',
+          confirmPassword: ''
+        }
       }
     },
     methods: {
@@ -92,8 +96,23 @@
           password: this.password,
           confirmPassword: this.confirmPassword
         });
-
-        console.log(response.data);
+  
+        console.log(response);
+        // let response = () => {
+        //   return new Promise(function(resolve) {
+        //     axios.post('register', {
+        //       register: {
+        //         username: this.username,
+        //         password: this.password,
+        //         confirmPassword: this.confirmPassword
+        //       }
+        //     }).then(response => {
+        //       resolve(response);
+        //     });
+        //   });
+        // }
+        // let responseData = await response();
+        // console.log(responseData);
       }
     }
   }

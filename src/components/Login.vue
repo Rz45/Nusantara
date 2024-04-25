@@ -31,7 +31,7 @@
         </div>
         <!-- kotak kanan -->
         <div class="col-md-6 p-4 my-3 right-box">
-          <form method="POST" class="needs-validation" autocomplete="off">
+          <form @submit.prevent="handleSubmit" class="needs-validation" autocomplete="off">
             <div class="row align-items-center">
               <div class="header-text mb-4">
                 <h2>Sign In</h2>
@@ -39,14 +39,14 @@
               <div class="input-group mb-3">
                 <div class="col">
                   <label for="" class="mb-2">Username</label>
-                  <input type="text" class="form-control form-control-lg bg-light fs-6 w-100" placeholder="Username" required autofocus />
+                  <input type="text" v-model="username" class="form-control form-control-lg bg-light fs-6 w-100" placeholder="Username" required autofocus />
                   <div class="invalid-feedback">Username is invalid</div>
                 </div>
               </div>
-              <div class="input-group mb-1">
+              <div class="input-group mb-3">
                 <div class="col">
                   <label for="" class="mb-2">Password</label>
-                  <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="password" required />
+                  <input type="password" v-model="password" class="form-control form-control-lg bg-light fs-6" placeholder="password" required />
                   <div class="invalid-feedback">Password is required</div>
                 </div>
               </div>
@@ -62,8 +62,12 @@
               <div class="input-group mb-3">
                 <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Login</button>
               </div>
-              <div class="input-group mb-3">
-                <h6 type="submit" class="fs-6">Don't have an account? <a class="stylnone" href="../../register/register.html">Create Account</a></h6>
+              <div class="input-group mb-5 d-flex justify-content-between">
+                <div class="forgot">
+                  <p>Don't have an account?
+                    <a href="#">Sign up here</a>
+                  </p>
+                </div>
               </div>
             </div>
           </form>
@@ -74,7 +78,33 @@
 
 <script>
 
-    export default {
-        name: 'Login'
+  import axios from 'axios';
+
+  export default {
+    name: 'Login',
+    data() {
+      return {
+        register: {
+          username: '',
+          password: '',
+        }
+      }
+    },
+    methods: {
+      async handleSubmit() {
+        const response = await axios.post('login', {
+          username: this.username,
+          password: this.password,
+        });
+
+        console.log(response);
+      }
     }
+  }
+    
 </script>
+
+<style>
+
+
+</style>
