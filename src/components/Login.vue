@@ -31,7 +31,7 @@
         </div>
         <!-- kotak kanan -->
         <div class="col-md-6 p-4 my-3 right-box">
-          <form @submit.prevent="handleSubmit" class="needs-validation" autocomplete="off">
+          <form @submit.prevent="login" class="needs-validation">
             <div class="row align-items-center">
               <div class="header-text mb-4">
                 <h2>Sign In</h2>
@@ -39,14 +39,14 @@
               <div class="input-group mb-3">
                 <div class="col">
                   <label for="" class="mb-2">Username</label>
-                  <input type="text" v-model="username" class="form-control form-control-lg bg-light fs-6 w-100" placeholder="Username" required autofocus />
+                  <input type="text" id="username" v-model="username" class="form-control form-control-lg bg-light fs-6 w-100" placeholder="Username" required autofocus />
                   <div class="invalid-feedback">Username is invalid</div>
                 </div>
               </div>
               <div class="input-group mb-3">
                 <div class="col">
                   <label for="" class="mb-2">Password</label>
-                  <input type="password" v-model="password" class="form-control form-control-lg bg-light fs-6" placeholder="password" required />
+                  <input type="password" id="password" v-model="password" class="form-control form-control-lg bg-light fs-6" placeholder="password" required />
                   <div class="invalid-feedback">Password is required</div>
                 </div>
               </div>
@@ -77,31 +77,32 @@
 </template>
 
 <script>
+import axios from 'axios';
 
-  import axios from 'axios';
-
-  export default {
-    name: 'Login',
-    data() {
-      return {
-        register: {
-          username: '',
-          password: '',
-        }
-      }
-    },
-    methods: {
-      async handleSubmit() {
-        const response = await axios.post('login', {
+export default {
+  data() {
+    return {
+      username: '',
+      password: ''
+    }
+  },
+  methods: {
+    async login() {
+      try {
+        const response = await axios.post('/api/login', {
           username: this.username,
-          password: this.password,
+          password: this.password
         });
-
-        console.log(response);
+        console.log(response.data);
+        // Simpan token JWT ke localStorage atau Vuex state
+        localStorage.setItem('token', response.data.token);
+        this.$router.push({ name: 'Dashboard' });
+      } catch (error) {
+        console.error(error.response.data.message);
       }
     }
   }
-    
+}
 </script>
 
 <style>

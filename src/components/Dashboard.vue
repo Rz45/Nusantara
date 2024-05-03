@@ -250,11 +250,19 @@
 </template>
 
 <script>
-    
-    export default {
-        name: 'Dashboard'
-    }
+// import axios from 'axios';
 
+export default {
+  methods: {
+    logout() {
+      // Hapus token dari localStorage
+      localStorage.removeItem('token');
+
+      // Arahkan kembali ke halaman login
+      this.$router.push({ name: 'Login' });
+    }
+  }
+}
 </script>
 
 <style>
