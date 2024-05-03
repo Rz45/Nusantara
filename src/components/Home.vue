@@ -7,7 +7,9 @@
             <h4>WELCOME TO</h4>
             <h1>NUSANTARA PROJECT</h1>
             <p>Tire Warehouse Management System</p>
-            <a class="btn btn-success" href="#" role="button">Get Started</a>
+            <a class="btn btn-success" href="#" role="button">Get Started
+                <!-- <RouterLink :to="{ name: 'Login' }">Get Started</RouterLink> -->
+            </a>
         </main>
     </section>
 

@@ -32,66 +32,21 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
-                            Posts
+                        <a href="#" class="sidebar-link">
+                            <i class="fa-solid fa-list pe-2"></i>
+                            Pengiriman
                         </a>
-                        <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 1</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 2</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 3</a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-regular fa-user pe-2"></i>
-                            Auth
+                        <a href="#" class="sidebar-link">
+                            <i class="fa-solid fa-list pe-2"></i>
+                            Stok Opname
                         </a>
-                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Login</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Register</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Forgot Password</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-header">
-                        Multi Level Menu
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#multi" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-share-nodes pe-2"></i>
-                            Multi Dropdown
-                        </a>
-                        <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-target="#level-1"
-                                    data-bs-toggle="collapse" aria-expanded="false">Level 1</a>
-                                <ul id="level-1" class="sidebar-dropdown list-unstyled collapse">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Level 1.1</a>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Level 1.2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-white">
-                        <i class="bi bi-box-arrow-right"></i>
-                        <span class="d-none d-sm-inline mx-1">Logout</span>
+                        <a href="#" data-bs-toggle="collapse" class="sidebar-link mt-5">
+                            <i class="fa-solid fa-list pe-2 bi-box-arrow-right"></i>
+                            <span class="d-none d-sm-inline mx-1">Logout</span>
                         </a>
                     </li>
                 </ul>
@@ -130,7 +85,7 @@
                                         <div class="col-6">
                                             <div class="p-3 m-1">
                                                 <h4>Welcome Back, Admin</h4>
-                                                <p class="mb-0">Admin Dashboard, CodzSword</p>
+                                                <p class="mb-0">Admin Dashboard, Admin</p>
                                             </div>
                                         </div>
                                         <div class="col-6 align-self-end text-end">
@@ -170,40 +125,83 @@
                     <div class="card border-0">
                         <div class="card-header">
                             <h5 class="card-title">
-                                Basic Table
+                                Recent Orders
                             </h5>
-                            <h6 class="card-subtitle text-muted">
+                            <!-- <h6 class="card-subtitle text-muted">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ducimus,
                                 necessitatibus reprehenderit itaque!
-                            </h6>
+                            </h6> -->
                         </div>
                         <div class="card-body">
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Handle</th>
+                                        <th scope="col">Nomor DO</th>
+                                        <th scope="col">Kode Barang</th>
+                                        <th scope="col">Deskripsi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td>DO-001</td>
+                                        <td>DUEL-1</td>
+                                        <td>Dueller</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
+                                        <td>DO-002</td>
+                                        <td>PTNZ-3</td>
+                                        <td>Potenza</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
-                                        <td colspan="2">Larry the Bird</td>
-                                        <td>@twitter</td>
+                                        <td>DO-003</td>
+                                        <td>ECOP-2</td>
+                                        <td>Ecopia</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>DO-001</td>
+                                        <td>DUEL-1</td>
+                                        <td>Dueller</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>DO-002</td>
+                                        <td>PTNZ-3</td>
+                                        <td>Potenza</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">6</th>
+                                        <td>DO-003</td>
+                                        <td>ECOP-2</td>
+                                        <td>Ecopia</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">7</th>
+                                        <td>DO-003</td>
+                                        <td>ECOP-2</td>
+                                        <td>Ecopia</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">8</th>
+                                        <td>DO-003</td>
+                                        <td>ECOP-2</td>
+                                        <td>Ecopia</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">9</th>
+                                        <td>DO-003</td>
+                                        <td>ECOP-2</td>
+                                        <td>Ecopia</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>DO-003</td>
+                                        <td>ECOP-2</td>
+                                        <td>Ecopia</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -221,7 +219,7 @@
                         <div class="col-6 text-start">
                             <p class="mb-0">
                                 <a href="#" class="text-muted">
-                                    <strong>CodzSwod</strong>
+                                    <strong>Nusantara</strong>
                                 </a>
                             </p>
                         </div>
@@ -232,12 +230,6 @@
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="#" class="text-muted">About Us</a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="text-muted">Terms</a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="text-muted">Booking</a>
                                 </li>
                             </ul>
                         </div>
@@ -254,6 +246,8 @@
     export default {
         name: 'Dashboard'
     }
+
+    
 
 </script>
 
@@ -302,7 +296,7 @@ h4 {
 #sidebar {
     max-width: 264px;
     min-width: 264px;
-    background: var(--bs-dark);
+    background: #cf1313;
     transition: all 0.35s ease-in-out;
 }
 
@@ -398,7 +392,7 @@ a.sidebar-link {
 }
 
 .card {
-    box-shadow: 0 0 .875rem 0 rgba(34, 46, 60, .05);
+    box-shadow: 0 0 .875rem 0 rgba(60, 35, 34, 0.05);
     margin-bottom: 24px;
 }
 
