@@ -14,7 +14,7 @@
                         Hello, Admin!
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link nav-link active">
+                        <a href="#" class="sidebar-link">
                             <i class="fa-solid fa-list pe-2"></i>
                             <RouterLink :to="{ name: 'Dashboard' }" class="nav-link">Dashboard</RouterLink>
                         </a>
@@ -26,7 +26,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="#" class="sidebar-link nav-link active">
                             <i class="fa-solid fa-list pe-2"></i>
                             <RouterLink :to="{ name: 'BarangKeluar' }" class="nav-link">Barang Keluar</RouterLink>
                         </a>
@@ -74,24 +74,10 @@
                     </ul>
                 </div>
             </nav>
-            <div class="progress-container">
-                <div class="progress vertical" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar bg-danger" style="height: 100%"></div>
-                </div>
-                <div class="progress vertical" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar bg-primary" style="height: 100%"></div>
-                </div>
-                <div class="progress vertical" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar bg-warning" style="height: 100%"></div>
-                </div>
-                <div class="progress vertical" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar bg-info" style="height: 100%"></div>
-                </div>
-            </div>
             <main class="content px-3 py-2">
                 <div class="container-fluid">
                     <div class="mb-3">
-                        <h4>Admin Dashboard</h4>
+                        <h4>Barang Keluar</h4>
                     </div>
                     <div class="row">
                         <div class="col-12 col-md-6 d-flex">
@@ -137,8 +123,6 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
                     <!-- Table Element -->
                     <div class="card border-0">
                         <div class="card-header">
@@ -408,34 +392,6 @@ a.sidebar-link {
     max-width: 100vw;
     width: 100vw;
 }
-
-
-/* .container-bar {
-  margin-top: 40px;
-  padding-top: 20px;
-} */
-
-.progress-container {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0px;
-}
-
-.progress-container .progress {
-  display: inline-block;
-  border-radius: 20px;
-  width: 10%;
-  height: 40px;
-  -webkit-transform: rotate(-90deg); 
-  transform: rotate(-90deg);
-}
-/* .vertical {
-  box-shadow: inset 0px 4px 6px #000000;
-}
-.progress-bar {
-  box-shadow: inset 0px 4px 6px rgba(255, 0, 0, 0.6);
-} */
-
 
 @media (min-width:768px) {
     .content {

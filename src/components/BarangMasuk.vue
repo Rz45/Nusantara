@@ -14,13 +14,13 @@
                         Hello, Admin!
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link nav-link active">
+                        <a href="#" class="sidebar-link">
                             <i class="fa-solid fa-list pe-2"></i>
                             <RouterLink :to="{ name: 'Dashboard' }" class="nav-link">Dashboard</RouterLink>
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="#" class="sidebar-link nav-link active">
                             <i class="fa-solid fa-list pe-2"></i>
                             <RouterLink :to="{ name: 'BarangMasuk' }" class="nav-link">Barang Masuk</RouterLink>
                         </a>
@@ -55,100 +55,24 @@
             </div>
         </aside>
         <div class="main">
-            <nav class="navbar navbar-expand px-3 border-bottom">
-                <button class="btn" id="sidebar-toggle" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse navbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
-                                <img src="../assets/nusantara.png" class="avatar img-fluid rounded" alt="">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <a href="#" class="dropdown-item">Profile</a>
-                                <a href="#" class="dropdown-item">Setting</a>
-                                <a href="#" class="dropdown-item">Logout</a>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="input-group mt-5 mb-5">
+                <input type="search" placeholder="Cari stok barang" aria-describedby="button-addon5" class="form-control rounded-pill">
+                <div class="input-group-append mx-3">
+                    <button id="button-addon5" type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
                 </div>
-            </nav>
-            <div class="progress-container">
-                <div class="progress vertical" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar bg-danger" style="height: 100%"></div>
-                </div>
-                <div class="progress vertical" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar bg-primary" style="height: 100%"></div>
-                </div>
-                <div class="progress vertical" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar bg-warning" style="height: 100%"></div>
-                </div>
-                <div class="progress vertical" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar bg-info" style="height: 100%"></div>
+                <div class="tambah-barang">
+                    <a href="#" class="btn btn-primary">
+                        <RouterLink :to="{ name: 'Login' }" class="tambah-button">Tambah Barang</RouterLink>
+                            <!-- <i class="bi bi-plus"></i> -->
+                    </a>
                 </div>
             </div>
-            <main class="content px-3 py-2">
-                <div class="container-fluid">
-                    <div class="mb-3">
-                        <h4>Admin Dashboard</h4>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-6 d-flex">
-                            <div class="card flex-fill border-0 illustration">
-                                <div class="card-body p-0 d-flex flex-fill">
-                                    <div class="row g-0 w-100">
-                                        <div class="col-6">
-                                            <div class="p-3 m-1">
-                                                <h4>Welcome Back, Admin</h4>
-                                                <p class="mb-0">Admin Dashboard, Admin</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 align-self-end text-end">
-                                            <img src="image/customer-support.jpg" class="img-fluid illustration-img"
-                                                alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 d-flex">
-                            <div class="card flex-fill border-0">
-                                <div class="card-body py-4">
-                                    <div class="d-flex align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h4 class="mb-2">
-                                                $ 78.00
-                                            </h4>
-                                            <p class="mb-2">
-                                                Total Earnings
-                                            </p>
-                                            <div class="mb-0">
-                                                <span class="badge text-success me-2">
-                                                    +9.0%
-                                                </span>
-                                                <span class="text-muted">
-                                                    Since Last Month
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
                     <!-- Table Element -->
-                    <div class="card border-0">
+                    <div class="card border-0 mx-5">
                         <div class="card-header">
                             <h5 class="card-title">
                                 Recent Orders
                             </h5>
-                            <!-- <h6 class="card-subtitle text-muted">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ducimus,
-                                necessitatibus reprehenderit itaque!
-                            </h6> -->
                         </div>
                         <div class="card-body">
                             <table class="table">
@@ -226,12 +150,12 @@
                         </div>
                     </div>
                 </div>
-            </main>
             <a href="#" class="theme-toggle">
                 <i class="fa-regular fa-moon"></i>
                 <i class="fa-regular fa-sun"></i>
             </a>
-            <footer class="footer">
+        </div>
+        <!-- <footer class="footer">
                 <div class="container-fluid">
                     <div class="row text-muted">
                         <div class="col-6 text-start">
@@ -253,9 +177,7 @@
                         </div>
                     </div>
                 </div>
-            </footer>
-        </div>
-    </div>
+            </footer> -->
     
 </template>
 
@@ -308,6 +230,37 @@ h4 {
     font-family: 'Poppins', sans-serif;
     font-size: 1.275rem;
     color: var(--bs-emphasis-color);
+}
+
+::-webkit-input-placeholder {
+   font-size: 15px;
+}
+
+.tambah-button {
+    color: #FFF;
+    font-size: 0.875rem;
+}
+
+.input-group {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    margin-left: 300px;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.footer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: var(--bs-primary-bg-subtle);
+
 }
 
 /* Layout for admin dashboard skeleton */
@@ -409,32 +362,16 @@ a.sidebar-link {
     width: 100vw;
 }
 
-
-/* .container-bar {
-  margin-top: 40px;
-  padding-top: 20px;
-} */
-
-.progress-container {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0px;
+.form-control:focus {
+  box-shadow: none;
 }
 
-.progress-container .progress {
-  display: inline-block;
-  border-radius: 20px;
-  width: 10%;
-  height: 40px;
-  -webkit-transform: rotate(-90deg); 
-  transform: rotate(-90deg);
+.form-control-underlined {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-left: 0;
 }
-/* .vertical {
-  box-shadow: inset 0px 4px 6px #000000;
-}
-.progress-bar {
-  box-shadow: inset 0px 4px 6px rgba(255, 0, 0, 0.6);
-} */
 
 
 @media (min-width:768px) {

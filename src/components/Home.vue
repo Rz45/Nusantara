@@ -2,15 +2,29 @@
     
     <section id="hero" 
         class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
-        <div class="hero-overlay"></div>
-        <main>
+        <div>
             <h4>WELCOME TO</h4>
             <h1>NUSANTARA PROJECT</h1>
             <p>Tire Warehouse Management System</p>
             <a class="btn btn-success" href="#" role="button">Get Started
-                <!-- <RouterLink :to="{ name: 'Login' }">Get Started</RouterLink> -->
+                <!-- <RouterLink :to="{ name: 'Login' }" class="nav-link">Read More</RouterLink> -->
             </a>
-        </main>
+            <div class="button">
+                <a href="#" class="btn btn-success">
+                    <!-- <RouterLink to="/login" class="nav-link">Login</RouterLink> -->
+                    <a href="#link" class="btn btn-info" role="button">Link Button</a>
+                </a>
+            </div>
+            <div>
+                <!-- <router-link to="/register" tag="button">Posts</router-link> -->
+                <RouterLink to="/login">Login</RouterLink>
+            </div>
+            <a href="#">
+                <RouterLink :to="{ name: 'Login' }" class="nav-link">Read More</RouterLink>
+            </a>
+        </div>
+        <div class="hero-overlay">
+        </div>
     </section>
 
 </template>
