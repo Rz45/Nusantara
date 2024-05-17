@@ -1,4 +1,5 @@
-<template>    
+<template>
+
     
     <section id="hero" 
         class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
@@ -30,6 +31,8 @@
 </template>
 
 <script>
+// import ChartComponent from './ChartComponent.vue';
+
     export default {
         name: 'Home'
     }

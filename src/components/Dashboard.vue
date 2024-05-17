@@ -74,20 +74,9 @@
                     </ul>
                 </div>
             </nav>
-            <div class="progress-container">
-                <div class="progress vertical" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar bg-danger" style="height: 100%"></div>
-                </div>
-                <div class="progress vertical" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar bg-primary" style="height: 100%"></div>
-                </div>
-                <div class="progress vertical" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar bg-warning" style="height: 100%"></div>
-                </div>
-                <div class="progress vertical" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar bg-info" style="height: 100%"></div>
-                </div>
-            </div>
+            <!-- <Doughnut :data="data" :options="options" /> -->
+            <!-- <Chart /> -->
+
             <main class="content px-3 py-2">
                 <div class="container-fluid">
                     <div class="mb-3">
@@ -261,22 +250,39 @@
 
 <script>
 // import axios from 'axios';
+// import Chart from "../components/ChartComponent.vue";
 
-export default {
-  methods: {
-    logout() {
-      // Hapus token dari localStorage
-      localStorage.removeItem('token');
+// import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
+// import { Doughnut } from 'vue-chartjs'
+// import * as chartConfig from '../chartConfig.ts'
 
-      // Arahkan kembali ke halaman login
-      this.$router.push({ name: 'Login' });
-    }
-}
-}
+// ChartJS.register(ArcElement, Tooltip, Legend)
+
+// export default {
+//   name: 'Chart',
+//   components: {
+//     Doughnut
+//   },
+//   data() {
+//     return chartConfig
+//   }
+// }
+
+// export default {
+//   methods: {
+//     logout() {
+//       // Hapus token dari localStorage
+//       localStorage.removeItem('token');
+
+//       // Arahkan kembali ke halaman login
+//       this.$router.push({ name: 'Login' });
+//     }
+// }
+// }
 
 </script>
 
-<style>
+<style scoped>
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 

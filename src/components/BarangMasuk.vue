@@ -198,7 +198,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 

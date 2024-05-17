@@ -7,6 +7,8 @@ import BarangMasuk from "../components/BarangMasuk.vue";
 import BarangKeluar from "../components/BarangKeluar.vue";
 import Pengiriman from "../components/Pengiriman.vue";
 import StokOpname from "../components/StokOpname.vue";
+import TambahBarang from "../components/TambahBarang.vue";
+import Chart from "../components/ChartComponent.vue";
 
 const routes = [
   {
@@ -48,6 +50,16 @@ const routes = [
     path: "/stok-opname",
     name: "StokOpname",
     component: StokOpname,
+  },
+  {
+    path: "/tambah-barang",
+    name: "TambahBarang",
+    component: TambahBarang,
+  },
+  {
+    path: "/chart",
+    name: "Chart",
+    component: Chart,
   },
 ];
 
